@@ -13,8 +13,14 @@ reverse(""); // ""
 ***********************************************************************/
 
 
-function reverse(str) {
-  // Your code here
+function reverse(string){ // define our function
+  if (string.length === 0) return string;
+  debugger
+  let first = string[0];
+  debugger
+  let result = reverse(string.slice(1));    //tom t
+  debugger
+  return  result + first;    
 }
 
 
