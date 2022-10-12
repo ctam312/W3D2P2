@@ -12,10 +12,43 @@ addToTwelve([1, 12, 4, 7, 6]); // false
 addToTwelve([1]); // false
 ***********************************************************************/
 
+// davids version utilizes shift:
 
 function addToTwelve(arr) {
-  // Your code here
+  //base case
+  if (arr.length <= 1){
+    debugger
+    return false
+  }
+  //recursive case
+  //if array has at least two elements
+  if (arr[0] + arr[1] === 12){
+    debugger
+    return true
+  } else {
+    arr.shift();
+    debugger
+    return addToTwelve(arr)
+    
+  }
 }
+
+// //chris version utilizes .pop()
+// function addToTwelve(arr) {
+//   // Your code here
+//   if (arr.length <= 1) {
+//     return false;
+//     debugger
+//   } else if ((arr[arr.length - 2] + arr[arr.length - 1]) === 12) {
+//     return true;
+//     debugger
+//   } else {
+//     arr.pop();
+//     return addToTwelve(arr);
+//   }
+// }
+
+addToTwelve([1, 12, 4, 7, 6]); // false
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/

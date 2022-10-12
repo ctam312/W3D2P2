@@ -23,7 +23,21 @@ function reverse(string){ // define our function
   return  result + first;    
 }
 
+//David's version
+/* 
+function reverse(str){
+  if (str.length <= 0){
+    return str;
+  } else {
+    let lastChar = str.slice(str.length - 1);
+    let restOfStr = str.slice(0, str.length - 1);
+    console.log('recursive step -->' + lastChar + ' ' + restOfStr)
+    return lastChar + reverse(restOfStr);
+  }
+}
+*/
 
+reverse("house"); // "esuoh"
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
